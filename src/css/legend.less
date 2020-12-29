@@ -1,0 +1,84 @@
+aside.legend {
+  position: static;
+  bottom: 10px;
+  left: 10px;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-family: sans-serif;
+  border-radius: 5px;
+  transform: translateZ(0);
+  z-index: 999;
+
+  @media @tablet {
+    position: static;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  h2 {
+    margin: 0;
+    padding: 5px 5px 5px 0;
+    text-align: left;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  ul.scale {
+    display: inline-flex;
+    padding: 0;
+    margin: 0 0 0 -10px;
+    list-style-type: none;
+    overflow: auto;
+    padding-bottom: 8px;
+
+    @media @tablet {
+      flex-wrap: wrap;
+    }
+
+    li {
+      line-height: 18px;
+      margin: 0 10px 2px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.4em;
+      
+      @media @tablet {
+        text-align: center;
+        width: 100% / 4;
+      }
+    }
+    
+    .block {
+      width: 8em;
+      height: 14px;
+      display: flex;
+      vertical-align: text-bottom;
+      padding: 0 10px;
+      opacity: .6;
+
+      @media @darkMode {
+        border: 1px solid white;
+      }
+      
+      @media @tablet {
+        display: block;
+        width: 100%;
+      }
+
+    }
+  }
+}
+.source {
+  font-size: 12px;
+  padding: 10px 0;
+  color: #999;
+  clear: both;
+  font-style: italic;
+  text-align: left;
+  .credit {
+    font-style: normal;
+    text-transform: uppercase;
+    display: inline-block;
+    float: right;
+  }
+}
