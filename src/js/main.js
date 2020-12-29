@@ -25,13 +25,16 @@ if (mapElement) {
 
   var all = "rate";
 
-//   var commafy = s => (s * 1).toLocaleString().replace(/\.0+$/, "");
+  var commafy = s => (s * 1).toLocaleString().replace(/\.0+$/, "");
 
-//   data.features.forEach(function(f) {
-//   ["Rossi", "Schrier"].forEach(function(prop) {
-//     f.properties[prop] = (f.properties[prop] * 100).toFixed(1);
-//   });
-// });
+  data.features.forEach(function(f) {
+  ["rate"].forEach(function(prop) {
+    f.properties[prop] = (f.properties[prop] * 100).toFixed(1);
+  });
+  ["TOTAL"].forEach(function(prop) {
+    f.properties[prop] = commafy ((f.properties[prop]));
+    });
+});
 
   var onEachFeature = function(feature, layer) {
 
@@ -56,13 +59,13 @@ if (mapElement) {
     // console.log(value)
     if (typeof value != "undefined") {
       // condition ? if-true : if-false;
-     return value >= .3 ? '#A5B9D0' :
-        value >= .20 ? '#E5C5C3' :
-        value >= .10 ? '#E54E51' :
-        value >= 0.01 ? '#921525' :
-             '#FFFFFF' ;
+     return value >= 30 ? '#49006a' :
+        value >= 20 ? '#ae017e' :
+        value >= 10 ? '#f768a1' :
+        value >= 0.01 ? '#fcc5c0' :
+             '#FAE2C1' ;
     } else {
-      return "E5E0D3"
+      return "gray"
     }
   };
 
@@ -96,4 +99,4 @@ var topLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/
 
  map.scrollWheelZoom.disable();
 
- map.scrollWheelZoom.disable();
+ map.setView([47.4540, -121.8381], 9);
