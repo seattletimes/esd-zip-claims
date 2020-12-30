@@ -5,8 +5,8 @@
       "path": "single-mahayana"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2020/business/esd-claim-map"
     }
   },
   "title": "",
